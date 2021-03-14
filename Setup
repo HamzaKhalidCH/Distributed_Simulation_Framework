@@ -1,0 +1,25 @@
+***Basic Setup For the Project***
+Have Anaconda Installed on your PC
+Create an environment of your desired name:
+i.e
+>> conda create -n myEnv python = 3.8.5
+
+***Installing Libraris***
+-> Python = 3.8.5 used currently
+
+option 1:
+Note:First activate you're previouly created environment
+>> conda activate myEnv
+(myEnv) >> conda install --file requirements.txt
+
+option 2(Manual):
+Note:First activate you're previouly created environment
+>> conda activate myEnv
+(myEnv) >> conda config --add channels conda-forge
+(myEnv) >> conda install matplotlib
+(myEnv) >> conda install mpi4py
+(myEnv) >> conda install pyfmi
+
+***Running Code***
+(myEnv) >> cd SimulationCode
+(myEnv) >> mpiexec -n 2 python Main.py
