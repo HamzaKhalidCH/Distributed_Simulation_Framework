@@ -23,3 +23,4 @@ Note:First activate you're previouly created environment
 ***Running Code***
 (myEnv) >> cd SimulationCode
 (myEnv) >> mpiexec -n 2 python Main.py
+
