@@ -45,6 +45,8 @@ def runChild(comm, bouncing_fmu):
         # Set the time
         bouncing_fmu.time = time
 
+        time = comm.recv(source = 0,tag=11)  
+
         if time is None:
             break
 

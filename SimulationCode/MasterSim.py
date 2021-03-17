@@ -8,8 +8,8 @@ import numpy as N
 from pyfmi import load_fmu
 
 path_to_fmus = '../files/FMUs'
-path_to_fmus_me1 = path_to_fmus+'ME1.0'
-path_to_fmus_cs1 = path_to_fmus+'CS1.0'
+path_to_fmus_me1 = path_to_fmus+'/ME1.0'
+path_to_fmus_cs1 = path_to_fmus+'/CS1.0'
 
 with_plots = True
 
