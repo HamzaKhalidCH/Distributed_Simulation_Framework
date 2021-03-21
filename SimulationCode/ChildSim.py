@@ -40,6 +40,7 @@ def runChild(comm, bouncing_fmu):
 
         # Compute the derivative
         dx = bouncing_fmu.get_derivatives()
+        #  
         # Advance
         h = min(dt, Tnext - time)
         # Set the time
@@ -49,13 +50,13 @@ def runChild(comm, bouncing_fmu):
 
         if time is None:
             break
-
         # Set the inputs at the current time (if any)
         # bouncing_fmu.set_real,set_integer,set_boolean,set_string (valueref, values)
 
         # Set the states at t = time (Perform the step)
         x = x + h * dx
-        bouncing_fmu.continuous_states = x
+
+        bouncing_fmu.continuous_states = x     
 
         # Get the event indicators at t = time
         event_ind_new = bouncing_fmu.get_event_indicators()

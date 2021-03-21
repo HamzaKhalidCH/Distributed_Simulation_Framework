@@ -33,8 +33,8 @@ def run_MPI():
         fmuName = comm.recv(source=0,tag=101)
         bouncing_fmu = load_fmu(fmuName, path_to_fmus_me1)
         runChild(comm,bouncing_fmu)
-
+"""
 if __name__ == "__main__":
     run_MPI()
-
+"""
 
