@@ -1,8 +1,11 @@
 from SimulationCode import Dimensions
 
 class Ball:
-    x = 0
-    y = 0
+
+    def __init__(self):
+        self.Ball = ''
+        self.dx = 0
+        self.dy = 0
 
 class MyFMU:
     dt = 0.03
