@@ -16,6 +16,5 @@ def run_MPI():
     elif rank == 1:
         runSlave(comm)
 
-
 if __name__ == "__main__":
     run_MPI()

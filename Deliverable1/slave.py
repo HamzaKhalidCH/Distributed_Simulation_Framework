@@ -27,6 +27,6 @@ def runSlave(comm):
 
         bouncing_fmu.completed_Integrator_Step(event_id)
 
-        comm.send(bouncing_fmu.getStates()+250, dest=0, tag=12)
+        comm.send(bouncing_fmu.getStates(), dest=0, tag=12)
 
     bouncing_fmu.finish()
