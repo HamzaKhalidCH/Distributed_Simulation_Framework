@@ -5,11 +5,6 @@ from datetime import datetime
 from MasterSim import runMaster
 from ChildSim import runChild
 
-import os as O
-
-import pylab as P
-import numpy as N
-
 from pyfmi import load_fmu
 
 comm = MPI.COMM_WORLD

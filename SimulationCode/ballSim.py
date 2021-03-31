@@ -1,7 +1,30 @@
-from FMU import MyFMU,Ball
+#from pyFMI import MyFMU
 import turtle
 import math
 import random
+#from pyFMI import load_fmu
+"""
+bouncing_fmu = load_fmu()
+
+Tstart = 0.5 #The start time.
+Tend   = 3.0 #The final simulation time.
+
+bouncing_fmu.time = Tstart  #Set the start time before the initialization.
+
+bouncing_fmu.initialize()
+
+# Get Continuous States
+x = bouncing_fmu.continuous_states
+
+"""
+
+
+class Ball:
+
+    def __init__(self):
+        self.Ball = ''
+        self.dx = 0
+        self.dy = 0
 
 width = 500
 height = 500
@@ -57,21 +80,11 @@ while True:
         balls[index].Ball.sety(balls[index].Ball.ycor()+balls[index].dy)
         print("x = ", balls[index].Ball.xcor(), "y = ", balls[index].Ball.ycor())
 
-
     for index in range(len(balls)):
         for i in range(index+1,len(balls)):
             if (math.sqrt((balls[i].Ball.xcor() - balls[index].Ball.xcor())**2
                           +(balls[i].Ball.ycor() - balls[index].Ball.ycor())**2))<20:
-                """"
-                tempX = balls[i].Ball.xcor()
-                tempY = balls[i].Ball.ycor()
-
-                balls[i].Ball.setx(balls[index].Ball.xcor())
-                balls[i].Ball.sety(balls[index].Ball.ycor())
-
-                balls[index].Ball.setx(tempX)
-                balls[index].Ball.sety(tempY)
-               """
+              
                 velX = balls[i].dx
                 velY = balls[i].dy
 
@@ -83,52 +96,5 @@ while True:
 
                 print('After Swap')
                 print('balls[i].x = ',velX," balls[i].y = ",velY)
+
                # print('balls[i].x = ', tempX, " balls[i].y = ", tempY)
-
-"""        
-
-while True:
-
-    wn.update()
-    ball1.shape("circle")
-    ball1.color("blue")
-    ball1.penup()
-
-    ball2.shape("circle")
-    ball2.color("red")
-    ball2.penup()
-
-    if ball1.ycor() < -250:
-        dy *= -1
-
-    if ball1.xcor() < -250:
-        dx *= -1
-
-    if ball1.ycor() > 250:
-        dy *= -1
-
-    if ball1.xcor() > 250:
-        dx *= -1
-
-    if ball2.ycor() < -250:
-        dy2 *= -1
-
-    if ball2.xcor() < -250:
-        dx2 *= -1
-
-    if ball2.ycor() > 250:
-        dy2 *= -1
-
-    if ball2.xcor() > 250:
-        dx2 *= -1
-
-    ball1.setx(ball1.xcor()+dx)
-    ball1.sety(ball1.ycor()+dy)
-
-    ball2.setx(ball2.xcor()+dx2)
-    ball2.sety(ball2.ycor()+dy2)
-
-
-    print("x = ",ball1.xcor(),"y = ",ball1.ycor())
-
-"""
