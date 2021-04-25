@@ -1,0 +1,5 @@
+FMIL: module = Model, log level = 2: [logStatusError][FMU status:Error] fmi2GetContinuousStates: Invalid argument states[] = NULL.
+FMIL: module = Model, log level = 2: [logStatusError][FMU status:Error] fmi2GetContinuousStates: Invalid argument states[] = NULL.
+FMIL: module = Model, log level = 2: [logStatusError][FMU status:Error] fmi2GetContinuousStates: Invalid argument states[] = NULL.
+FMIL: module = Model, log level = 2: [logStatusError][FMU status:Error] fmi2GetContinuousStates: Invalid argument states[] = NULL.
+FMIL: module = Model, log level = 2: [logStatusError][FMU status:Error] fmi2GetContinuousStates: Invalid argument states[] = NULL.
