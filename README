@@ -1,0 +1,38 @@
+A DISTRIBUTED SIMULATION FRAMEWORK FOR SIMULATIONS IN A DISTRIBUTED MANNER
+
+-------------------------------- SETUP ---------------------------------------
+
+To Setup follow the instructions in the Setup file 
+
+-------------------------------- Requirements --------------------------------
+
+The required libraries are included in the requirements.txt file
+
+-------------------------------- Directory Sructure --------------------------
+
+     ------------------------------ Fmus ----------------------------
+     
+Following contain the fmu's which are to be loaded in our program, choose from Model Exchange FMUs or Co-Simulation FMUs 
+
+file/FMUs
+    - CS.0
+    - CS.1
+    - ME.0
+    - ME.1
+    
+    ------------------------------- Main Code -----------------------
+    
+SimulationCode/
+     - Main.py 
+     - Child.py
+     - Master.py
+     - bouncingball-log.txt
+     
+     The Main.py is the main file we have to run as discussed in the setup.py file
+     Child is the child proces that master will run and master is the one that will controll child.py and save the results in the bouncingball_log.txt
+     
+     ----------------------------- Snippets --------------------------
+     
+ SimulationCodeSnippets/
+ 
+ Contain Sample codes nothing regarding the main functionality 
